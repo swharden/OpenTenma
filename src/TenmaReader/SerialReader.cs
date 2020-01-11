@@ -9,6 +9,7 @@ namespace TenmaReader
     public class SerialReader : IDisposable
     {
         readonly SerialPort ser;
+        public uint readCount = 0;
 
         public SerialReader(string portName = "COM1")
         {
@@ -59,6 +60,7 @@ namespace TenmaReader
             if (string.Compare(line1, line2) != 0)
                 return null; // strings dont match
 
+            readCount += 1;
             return line1;
         }
     }

@@ -1,9 +1,21 @@
 # OpenTenma
 OpenTenma is an open-source data logger for Tenma multimeters.
 
-***WARNING: this project status is ALPHA and not ready for public use***
+***WARNING: this project is ALPHA and not ready for public use***
 
-### Serial Protocol Notes
+![](dev/tenma-72-7750-angle.jpg)
+
+![](dev/screenshot.gif)
+
+### Multimeter Notes
+
+* I'm developing against a Tenma 72-7750 multimeter. 
+  * It's about [$60 on Amazon](https://www.amazon.com/s?k=Tenma+72-7750) in 2020.
+  * It's a rebranded UNI-T UT60G
+  * The [manual](http://www.farnell.com/datasheets/70028.pdf) is available
+  * Hardware details are on the [Sigrok Tenma 72-7750](https://sigrok.org/wiki/Tenma_72-7750) page
+
+### Tenma Serial Protocol Notes
 
 * Each line contains a 9 character ASCII string (followed by a line break)
 * Each burst contains an old value and a new value.
